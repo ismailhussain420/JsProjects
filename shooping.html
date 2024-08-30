@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        
+        *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif
+}
+
+.container{
+    width:1000px;
+    height: 700px;
+    margin-left:7%;
+    margin-top:60px;
+    background-color: aliceblue;
+    float: left;
+    box-sizing: border-box;
+    margin-right: 40px;
+    box-shadow: 0px 0px 18px 16px lightgray
+}
+.fixed{
+    width: 600px;
+    height:600px;
+    margin-top:60px;
+
+    float: left;
+    box-sizing: border-box;
+    background-color: aliceblue;
+
+    box-shadow: 0px 0px 18px 16px lightgray
+
+
+
+}
+.h1{
+    text-align: center;
+    color:teal;
+    weight: 1000;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top:10px;
+}
+.img{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 18px 16px lightgray
+
+}
+.card{
+    margin-left:30px;
+}
+.card_img{
+    width: 40%;
+    text-align: center;
+    box-shadow: 0px 0px 18px 16px lightgray;
+    padding: 20px;
+    float:left
+
+}
+.card_title{
+    float:left;
+    margin-left:100px;
+    padding:20px
+}
+h3{
+    font-size: 1.6rem;
+    padding:10px;
+    
+}
+.price{
+    color:red
+}
+.icon{
+    background: teal;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background 0.5s;
+    padding:5px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 2px solid teal;
+
+
+}
+.icon:hover{
+    background-color:white ;
+    color:teal;
+    border: 2px solid teal;
+    border-radius: 50%;
+    font-size: 1.6rem;
+
+
+
+}
+.input{
+    width:60px;
+    background-color: #5e5f5d;
+    color: #f1e7e7;
+    padding:7px;
+    font-size:1.4rem;
+    border:none;
+  
+}
+.item{
+    font-size: 1.5rem;
+}
+.clear{
+    clear: both;
+}
+.hrStyle{
+    border:1px solid gray;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+
+}
+.total{
+    text-align: center;
+    color: teal;
+}
+h2{
+    padding: 20px;
+}
+.cupon{
+    color: teal;
+    text-align: center;
+    display: none;
+}
+.code{
+    color: rgb(38, 80, 221);
+    text-align: center;
+    font-size: 1.5rem;
+}
+.cupon_inpt{
+    width:40%;
+    padding:8px;
+   
+  
+    margin-top: 12px;
+}
+.fixed h1{
+    margin-top: 32px;
+}
+
+.apply{
+
+    padding: 11px;
+    width: 79px;
+    /* background: teal; */
+    background: white;
+    color: teal;
+    border: 2px solid teal;
+    font-weight: 800;
+    border-radius: 29px;
+    
+
+}
+.apply:hover{
+    background:teal;
+    color:white;
+    transition: 1s;
+}
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lighting.html">Lighting</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="menu.html">MEnu</a></li>
+            <li><a href="shooping.html">Shooping Cart</a></li>
+            <li><a href="ToDo.html">ToDo</a></li>
+
+
+        </ul>
+    </div>
+
+
+       
+    <div class="container">
+        <h1 class="h1"> Mahfuza's Kitten House</h1>
+        <div class="card">
+            <div class="card_img">
+                <img src ="c1.jpg" class="img">
+            </div>
+            <div class="card_title">
+                <h3> Pursian Kitten</h3>
+                <h3>Size: 6 inch</h3>
+                <h3 class="price">Price: $<span id="price">200</span></h3>
+    
+                <i class="fas fa-plus icon" onclick="plus('count','price','item')" ></i>
+                <input class="input" type="button" value="0" id="count">
+                <i class="fas fa-minus icon"  onclick="minus('count','price','item')"></i>
+                <span class="item">Your item $<span id="item">00</span></span>
+                
+            </div>
+        </div>
+    
+        <div class="clear"></div>
+        <hr class="hrStyle">
+        <div class="card">
+            <div class="card_img">
+                <img src ="c2.jpg" class="img">
+            </div>
+            <div class="card_title">
+                <h3> Felis cat </h3>
+                <h3>Size: 7 inch</h3>
+                <h3 class="price">Price: $<span id="price1">200</span></h3>
+    
+                <i class="fas fa-plus icon" onclick="plus('count1','price1','item1')"></i>
+                <input class="input" type="button" value="0" id="count1">
+                <i class="fas fa-minus icon"  onclick="minus('count1','price1','item1')"></i>
+                <span class="item">Your item $<span id="item1">00</span></span>
+                
+            </div>
+        </div>
+    
+        
+        
+      
+    </div>
+    <div class="fixed">
+    
+            <h1 class="total">Total Amount </h1>
+            <h2>Product Amount : $<span id="product_amount">00 </span></h2>
+            <h2>Delivery Charge:$<span id="charge">20</span></h2>
+            ----------------------------------------------------------
+            -----------------------------------------------------
+            <h2>Total Product Amount: $<span id="total_amount"> 00</span></h2>
+            <hr> <br><br><br>
+            <div class="cupon" id="cupon_main_Div">
+                <h4 class="cupon">Your Cupon code is</h4><br>
+            <h4 class="code">Your code is Ismail</h4>
+            <input class="cupon_inpt" type="text" placeholder="Enter cupon" id="cuponInput">
+            <br>
+            <br>
+            <button class="apply" id="applyBtn">Apply</button>
+            </div>
+            
+    </div>
+
+    <!-- Shooping Cart  -->
+    
+    <script src ="index.js"></script>
+
+</body>
+</html>

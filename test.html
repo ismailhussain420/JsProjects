@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To DO</title>
+    <style>
+         input{
+            width:90%;
+            padding:10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .todo_form{
+            width:45%;
+            margin-left:30px;
+            float :left
+        }
+        table{
+            width:90%;
+            text-align: center;
+            margin-top: 17%;
+        }
+        table,th,td{
+            padding:10px;
+            border:2px solid white;
+            color:#fff;
+            border-collapse: collapse;
+        }
+        tr:nth-child(even){
+            background-color: blueviolet;
+        }
+        tr:nth-child(odd){
+            background-color: rgb(87, 67, 105);
+
+        }
+        form{
+            box-shadow: 0px 0px 15px 2px gray;
+            padding: 18px;
+        }
+        button{
+            background: #fff;
+            color: #221589;
+            padding: 14px;
+            width: 97px;
+            border: 1px solid #221589;
+            border-radius: 28px;
+            /* margin-right: -17px; */
+            margin-left: 81%;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        button:hover{
+            background-color: #221589;
+            transition: 1s;
+            color:#fff;
+            border:1px solid #221589;
+            padding: 14px;
+            font-size: 14px;
+            font-weight: 700;
+
+        }
+        h1{
+            font-size: 59px;
+            text-align: center;
+            text-shadow: 0px 4px 2px gray;
+            text-transform: uppercase;
+        }
+      
+    </style>
+</head>
+<body>
+
+<div class="todo_form">
+   
+    <h1>Submit Student Info</h1>
+    <div class="todo_content">
+        <form action="">
+            <p>Enter Your Name:</p>
+            <input type="text" placeholder="Enter Your Name" id="name">
+
+            <p>Enter Your Roll:</p>
+            <input type="number" placeholder="Enter Your Roll" id="roll">
+
+            <p>Enter Department:</p>
+            <input type="text" placeholder="Enter Your Department" id="dep">
+            <p>Enter Department:</p>
+            <input type="text" placeholder="Enter Your GPA" id="gpa">
+    
+    <br><br>
+        <button id="stbutton"> Submit</button>
+        </form>
+       
+    </div>
+
+
+    
+    
+</div>
+<div class="todo_form">
+    <table>
+      <thead>
+      
+          <th>Name</th>
+          <th>Roll</th>
+          <th>Department</th>
+          <th>GPA</th>
+   
+          <tbody id="tb">
+
+
+          </tbody>
+      </thead>
+    </table>
+</div>
+<script>
+  
+  let stbutton = document.getElementById("stbutton");
+  stbutton.addEventListener("click",function(pera){
+
+pera.preventDefault();
+    let name = document.getElementById("name").value;
+    var tr = document.createElement("tr");
+    var tbody =  document.getElementById("tb");
+    if(name == '' ){
+            alert("Fill Up Form");
+    }else{
+
+      
+    var td = document.createElement("td");
+    var tbody =  document.getElementById("tb");
+    var content = document.createTextNode(name);
+    td.appendChild(content);
+    tr.appendChild(td);
+   
+
+
+    }
+
+    var roll = document.getElementById("roll").value;
+    if(roll == ''){
+            alert("Fill Up Form");
+    }else{
+
+       
+        var rolltd = document.createElement("td");
+        var rollcontent = document.createTextNode(roll);
+        rolltd.appendChild(rollcontent);
+        tr.appendChild(rolltd);
+
+
+
+    } 
+    var dep = document.getElementById("dep").value;
+
+    if(dep == ''){
+            alert("Fill Up Form");
+    }else{
+
+       
+        var deptd = document.createElement("td");
+        var depcontent = document.createTextNode(dep);
+        deptd.appendChild(depcontent);
+        tr.appendChild(deptd);
+
+
+
+    }
+    var gpa = document.getElementById("gpa").value;
+
+if(gpa == ''){
+        alert("Fill Up Form");
+}else{
+
+   
+    var gpatd = document.createElement("td");
+    var gpacontent = document.createTextNode(gpa);
+    gpatd.appendChild(gpacontent);
+    tr.appendChild(gpatd);
+
+
+
+}
+
+    tbody.appendChild(tr);
+
+  })
+
+   
+
+
+
+</script>
+</body>
+</html>

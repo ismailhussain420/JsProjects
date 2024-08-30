@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px
+        }
+        .nav{
+            background-color: rgba(226, 24, 199, 0.966);
+ 
+            padding:15px;
+            text-align: center;
+        }
+        li{
+          
+            display: inline;
+
+        }
+        li a{
+            color:rgb(255, 253, 253);
+            text-decoration:none;
+            margin:10px;
+            font-size: 20px;
+            font-weight:900;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lighting.html">Lighting</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="menu.html">MEnu</a></li>
+            <li><a href="shooping.html">Shooping Cart</a></li>
+            <li><a href="ToDo.html">ToDo</a></li>
+
+
+        </ul>
+    </div>
+    <h1>Contact Page</h1>
+    <script>
+        var a = document.querySelectorAll("a");
+        var locationAdress = location.href;
+        for(var i =0; i <a.length ;i++){
+           if(a[i].href === locationAdress ){
+            a[i].style.color ="black";
+           }
+        }
+
+// 
+
+
+
+    </script>
+</body>
+</html>

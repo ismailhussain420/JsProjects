@@ -1,0 +1,280 @@
+*{
+    margin:0px;
+    padding:0px
+}
+
+.nav{
+ background: rgba(2, 7, 40, 0.5);
+
+    padding:15px;
+    text-align: center;
+    position:fixed;
+    width:100%
+}
+.navClass{
+    background-color: blueviolet;
+}
+li{
+  
+    display: inline;
+
+}
+li a{
+    color:rgb(255, 253, 253);
+    text-decoration:none;
+    margin:10px;
+    font-size: 20px;
+    font-weight:900;
+    text-transform: uppercase;
+}
+
+.slider{
+    width: 100%;
+    
+}
+.slider img{
+    width: 100%;
+    height:50%
+
+}
+p{
+    margin: 6%;
+    text-align: justify;
+
+}
+h1{
+   text-align: center;
+   margin:45px;
+
+}
+.click_slider{
+    text-align: center;
+    margin-top: 15%;
+}
+
+.click_slider img{
+    width:50%
+}
+#next{
+    padding: 12px;
+    width: 75px;
+    border-radius: 26px;
+
+    background: rgba(226, 24, 199, 0.966);
+    color: white;
+    border: 1px solid rgba(226, 24, 199, 0.966);
+    box-shadow: 1px 1px 1px 2px lightgray;
+    position: relative;
+   
+    margin-left:10%;
+    margin-bottom: 5%;
+}
+#next:hover{
+background: white;
+color:rgba(226, 24, 199, 0.966);
+border: 1px solid rgba(226, 24, 199, 0.966);
+transition:1s ;
+}
+
+#Prev{
+    padding: 12px;
+    width: 75px;
+    border-radius: 26px;
+
+    background: rgba(226, 24, 199, 0.966);
+    color: white;
+    border: 1px solid rgba(226, 24, 199, 0.966);
+    box-shadow: 1px 1px 1px 2px lightgray;
+    position: relative;
+   
+    margin-left:10%;
+    margin-bottom: 5%;
+
+}
+#Prev:hover{
+background: white;
+color:rgba(226, 24, 199, 0.966);
+border: 1px solid rgba(226, 24, 199, 0.966);
+transition:1s ;
+}
+.btn{
+margin-left: -6%;
+}
+
+/* About Section*/   
+.about_section{
+display:inline;
+box-sizing: border-box;
+}
+
+.about_img img{
+width: 34.5rem;
+margin-left: 28%;
+box-shadow: 0px 0px 42px 3px lightgray;
+
+
+}
+
+.about_img {
+display: inline-block;
+float:left;
+width: 50%;
+opacity: 0;
+transition: all 1s;
+transform: scale(0.1)  translateX(-100%);
+}
+
+.aboutImgActive {
+opacity: 1;
+transition: all 1s;
+transform: scale(1) translateX(0%);
+}
+/* About content */
+.about_content {
+display: inline-block;
+width: 50%;
+opacity: 0;
+transition: all 1s;
+transform: scale(0.1) translateX(100%);
+}
+
+.contentClass {
+opacity: 1;
+transition: all 1s;
+transform: scale(1) translateX(0%);
+}
+
+/* TypeEfect */
+#h1::after{
+
+border-right:2px solid black;
+content: '';
+margin-left:10px;
+animation: blink 0.6s infinite;
+}
+
+@keyframes blink{
+0%{
+opacity:0;
+}
+100%{
+opacity:1
+}
+}
+/* clickable slider */
+#cl_h1::after{
+border-right:2px solid black;
+content: '';
+margin-left:10px;
+animation: clBlinks 0.6s infinite;
+
+}
+@keyframes clBlinks{
+0%{
+opacity:0;
+}
+100%{
+opacity:100;
+}
+}
+
+
+/* image_searching */
+.image_searching{
+width:100%;
+position: relative;
+left:5%
+
+
+}
+.search_box {
+text-align: center;
+}
+.search_box input{
+
+width: 25%;
+border: 1px solid black;
+padding: 6px;
+border-radius: 14px;
+box-shadow: 0px 3px 4px lightgray;
+margin-bottom: 3%;
+
+}
+.search_box input:hover{
+background-color: black;
+color:white;
+transition: all 1s;
+
+}
+.search_Item {
+margin-left:100px;
+box-sizing: border-box;
+float: left;
+
+}
+.search_Item img{
+width:300px;
+height:300px
+}
+.search_Item h2{
+text-align: center;
+margin: 10px;
+text-transform: capitalize;
+
+}
+
+/* Image Zooming */
+.image_zoom{
+    position: relative;
+    margin-top: 52%;
+    text-align: center;
+    
+   
+}
+
+.img_gallary img{
+    width:20%;
+    height:20%
+}
+.main_img img{
+    width:40%
+}
+/* Lighting */
+
+.lighting{
+    text-align: center;
+}
+/* social media */
+.social_media{
+    width: 60px;
+    padding: 10px;
+    position: absolute;
+    right: -2%;
+    bottom: 52%;
+    display: none;
+
+
+}
+.social_media ul{
+    box-shadow: 0px 0px 5px 1px lightgray;
+    padding: 10px;
+    position: fixed;
+
+
+
+}
+.social_media ul li{
+    display: inline;
+    transition: margin-left 0.3s ease;
+   
+}
+.social_media ul li a{
+    padding: 11px;
+    margin-left:-10px;
+
+    color: #ff00ae;
+    font-size: 23px;
+}
+.social_media ul li a:hover{
+    margin-left:-18%
+}
